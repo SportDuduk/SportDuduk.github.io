@@ -43,11 +43,21 @@
             <p class="product-price"><span class="strike-through">160 лв./грам</span> <span class="discount">120 лв./грам</span></p>
             <p class="price-info">For educational purposes only</p>
             <p class="description">This white powder is used exclusively for educational purposes and is not associated with any illegal substances. It is employed in various educational contexts to demonstrate certain principles and concepts.</p>
-            <p>For more information, contact your educational institution (dealer).</p>
+            <p>For more information, contact your educational institution (Drug dealer).</p>
             <button>Learn More</button>
         </div>
 
-<div class="product">
+        <!-- Product 4 - Firewood -->
+       <div class="product">
+    <img src="https://www.dariles.com/UserFiles/products/BEBC5E59-443E-3BE5-B8C9-8668027E3B7E.jpg?q=100&cache&w=800" alt="Firewood">
+    <h2 class="product-title">Firewood</h2>
+    <p class="product-price">300 лв./кубик</p>
+    <p class="description">High-quality firewood for a cozy and warm atmosphere, cut by our hardworking Little Gipsy Worker. Perfect for your fireplace or outdoor gatherings. Sourced from sustainable forests to ensure environmental responsibility.</p>
+    <button>Add to Cart</button>
+</div>
+
+        <!-- Product 5 - Little Gipsy Worker -->
+        <div class="product">
             <img src="https://m.netinfo.bg/media/images/29200/29200538/640-420-ciganche-ot-komatevo-vzrivi-internet-s-poznaniiata-si.jpg" alt="Little Gipsy Worker">
             <h2 class="product-title">Little Gipsy Worker</h2>
             <p class="product-price">700 лв.</p>
@@ -79,20 +89,4 @@
             });
 
             function handleSwipe(product) {
-                const swipeThreshold = 50; // Adjust this value as needed
-
-                const deltaX = touchEndX - touchStartX;
-
-                if (deltaX > swipeThreshold) {
-                    // Swipe right, show previous product or take any other action
-                    console.log('Swipe right');
-                } else if (deltaX < -swipeThreshold) {
-                    // Swipe left, show next product or take any other action
-                    console.log('Swipe left');
-                }
-            }
-        });
-    </script>
-
-</body>
-</html>
+                const swipeThreshold = 50

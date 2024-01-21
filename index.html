@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportDuduk</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <!-- Replace the text with an image -->
+        <img src="logo.png" alt="SportDuduk Logo">
+    </header>
+
+    <div class="product-container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://cdn.sportdepot.bg/files/catalog/detail/DR8784-301_01.jpg" alt="NIKE Обувки ZOOM LEBRON NXXT GEN">
+            <h2 class="product-title">NIKE Обувки ZOOM LEBRON NXXT GEN</h2>
+            <p class="product-price"><span class="strike-through">329,99 лв.</span> <span class="discount">214,49 лв.</span> СПЕСТЯВАШ 35%</p>
+            <p class="price-info">Най-добра цена през последните 30 дни*: 230,99 лв.</p>
+            <p class="description">Без значение дали сте играч, който забива като на състезание по забивки или играч, който се движи като светкавица по корта, с новите LeBron NXXT Gen ще се чувствате по-бързи, по-уверени и по-сигурни. Специално създадени с цел да отговорят на изискванията на бързата игра днес, така че да сте винаги една стъпка пред конкуренцията!</p>
+            <p>АРТИКУЛЕН НОМЕР: 200000546652</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://cdn.sportdepot.bg/files/catalog/detail/U18819-DBLUE_01.jpg" alt="FISCHER Ски обувки TRAVERS GR">
+            <h2 class="product-title">FISCHER Ски обувки TRAVERS GR</h2>
+            <p class="product-price"><span class="strike-through">1099,00 лв.</span> <span class="discount">879,20 лв.</span> СПЕСТЯВАШ 20%</p>
+            <p class="price-info">Най-добра цена през последните 30 дни*: 769,30 лв.</p>
+            <p class="description">Ски обувки подходящи за touring/пантене, които осигуряват отлично прилягане, разпределение на напрежението и пренасяне на енергията от скиора към ските.</p>
+            <p>АРТИКУЛЕН НОМЕР: 200000192125</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://www.bruker.com/es/resources/library/application-notes-mr/nmr-complements-standard-infrared-spectroscopy-in-the-detection-of-cocaine/_jcr_content/teaserImage.coreimg.jpeg/1603052733969/banner-cocaine.jpeg" alt="White Powder">
+            <h2 class="product-title">White Powder</h2>
+            <p class="product-price"><span class="strike-through">160 лв./грам</span> <span class="discount">120 лв./грам</span></p>
+            <p class="price-info">For educational purposes only</p>
+            <p class="description">This white powder is used exclusively for educational purposes and is not associated with any illegal substances. It is employed in various educational contexts to demonstrate certain principles and concepts.</p>
+            <p>For more information, contact your educational institution (Drug dealer).</p>
+            <button>Learn More</button>
+        </div>
+
+<div class="product">
+            <img src="https://m.netinfo.bg/media/images/29200/29200538/640-420-ciganche-ot-komatevo-vzrivi-internet-s-poznaniiata-si.jpg" alt="Little Gipsy Worker">
+            <h2 class="product-title">Little Gipsy Worker</h2>
+            <p class="product-price">700 лв.</p>
+            <p class="description">Meet our little gipsy worker, a charming and industrious companion. Despite being small in size, this figurine is crafted with great attention to detail. A perfect addition to your workspace, reminding you of the value of hard work and determination.</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Add more products as needed -->
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            document.querySelectorAll('.product').forEach(function (product) {
+                product.addEventListener('touchstart', function (e) {
+                    touchStartX = e.touches[0].clientX;
+                });
+
+                product.addEventListener('touchmove', function (e) {
+                    touchEndX = e.touches[0].clientX;
+                });
+
+                product.addEventListener('touchend', function () {
+                    handleSwipe(product);
+                });
+            });
+
+            function handleSwipe(product) {
+                const swipeThreshold = 50; // Adjust this value as needed
+
+                const deltaX = touchEndX - touchStartX;
+
+                if (deltaX > swipeThreshold) {
+                    // Swipe right, show previous product or take any other action
+                    console.log('Swipe right');
+                } else if (deltaX < -swipeThreshold) {
+                    // Swipe left, show next product or take any other action
+                    console.log('Swipe left');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

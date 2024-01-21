@@ -1,0 +1,102 @@
+/* styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #c0392b; /* Dark red */
+    color: #fff;
+    margin: 0;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #444; /* Dark gray */
+    border-radius: 8px;
+    width: 300px;
+    background-color: #333; /* Dark background */
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+h2.product-title {
+    font-size: 2em; /* Larger title font size */
+    color: #fff; /* White color */
+    margin-bottom: 10px;
+}
+
+p.product-price {
+    font-size: 1.5em; /* Larger price font size */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.strike-through {
+    text-decoration: line-through;
+    color: #bbb; /* Light gray for initial price */
+}
+
+.discount {
+    color: #c0392b; /* Dark red for discounted price */
+}
+
+.price-info, .description {
+    color: #bbb; /* Light gray for additional information */
+}
+
+button {
+    background-color: #c0392b; /* Dark red */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Media queries for smaller screens (mobile devices) */
+@media only screen and (max-width: 600px) {
+    .product {
+        width: 100%; /* Take full width on smaller screens */
+    }
+
+    header {
+        font-size: 1.5em; /* Adjust header font size */
+    }
+
+    h2.product-title {
+        font-size: 1.5em; /* Adjust product title font size */
+    }
+
+    p.product-price {
+        font-size: 1.2em; /* Adjust product price font size */
+    }
+
+    .strike-through, .discount, .price-info, .description {
+        font-size: 1em; /* Adjust font size for additional information */
+    }
+}

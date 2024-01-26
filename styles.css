@@ -1,35 +1,20 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: darkred;
+    color: white;
     margin: 0;
     padding: 0;
-    background: #8B0000; /* Dark red background */
-    color: #fff; /* White text color */
 }
 
-
-
-To change the background color to dark red and make the logo smaller, you can update your CSS as follows:
-
-Update the background color of the body to a dark red. Here is a suggested color, but feel free to choose a different shade if you prefer:
-
-css
-Copy code
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #8B0000; /* Dark red background */
-    color: #fff; /* White text color */
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
-To make the logo smaller, you can adjust the size of the img tag within the header. You can specify a width (and optionally a height) that you think looks best:
 
-css
-Copy code
 header img {
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* This will maintain the aspect ratio */
-    display: block;
-    margin: 10px auto; /* Centers the logo with some margin */
+    max-width: 100px;
+    height: auto;
 }
 
 .product-container {
@@ -37,76 +22,82 @@ header img {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .product {
-    background: #333; /* Darker background for product */
-    border: 1px solid #444; /* Slightly lighter border for contrast */
-    padding: 15px;
-    width: calc(33.333% - 40px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-}
-
-.product:hover {
-    transform: translateY(-5px);
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
 }
 
 .product img {
     max-width: 100%;
     height: auto;
+    margin-bottom: 10px;
 }
 
 .product-title {
-    font-size: 18px;
-    color: #ddd; /* Light color for titles */
+    font-size: 1.2em;
     margin: 10px 0;
 }
 
 .product-price {
-    font-size: 16px;
-    color: #aaa; /* Light gray color for price */
+    font-size: 1.1em;
+    margin: 5px 0;
 }
 
 .strike-through {
     text-decoration: line-through;
-    color: #777; /* Gray color for strike-through */
+    color: grey;
 }
 
 .discount {
-    color: #4CAF50; /* Green color for discount */
-    font-weight: bold;
+    color: lightgreen;
 }
 
-.price-info, .description {
-    color: #bbb; /* Light gray color for additional info */
-    font-size: 14px;
+.price-info {
+    font-size: 0.9em;
     margin: 5px 0;
 }
 
+.description {
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
 button {
-    background: #0056b3; /* Blue background for buttons */
+    background-color: #0066cc;
     color: white;
     border: none;
-    padding: 10px 15px;
-    margin-top: 10px;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background: #004494; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
-@media (max-width: 992px) {
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
     .product {
-        width: calc(50% - 40px);
+        width: 100%;
     }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 601px) and (max-width: 900px) {
     .product {
-        width: calc(100% - 40px);
+        width: 45%;
+    }
+}
+
+@media (min-width: 901px) {
+    .product {
+        width: 30%;
     }
 }

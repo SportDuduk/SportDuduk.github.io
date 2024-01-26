@@ -17,26 +17,24 @@ header {
 
 .product-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px;
 }
 
 .product {
     text-align: center;
-    margin: 20px;
+    margin: 10px;
     padding: 20px;
     border: 1px solid #444;
     border-radius: 8px;
     background-color: #333;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    
-    /* Flex item adjustment */
-    flex: 0 0 calc(33.333% - 40px); /* 33.333% for 3 items and -40px for the margins */
+    flex: 0 0 calc(33.333% - 20px);
     display: flex;
     flex-direction: column;
+    height: auto;
 }
-
 
 .product:hover {
     transform: translateY(-10px);
@@ -102,9 +100,15 @@ button:hover {
     background-color: #d35400;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .product {
-        width: 100%;
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product {
+        flex: 0 0 calc(100% - 20px);
     }
 
     header {

@@ -1,10 +1,12 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: darkred;
     color: white;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -19,35 +21,40 @@ header img {
 }
 
 .product-container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 10px;
 }
 
 .product {
+    background-color: #222;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
     width: 300px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .product img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .product-title {
-    font-size: 1.2em;
+    color: white;
+    text-align: center;
     margin: 10px 0;
 }
 
 .product-price {
-    font-size: 1.1em;
+    color: white;
+    text-align: center;
     margin: 5px 0;
 }
 
@@ -57,48 +64,29 @@ header img {
 }
 
 .discount {
-    color: lightgreen;
+    color: limegreen;
 }
 
-.price-info {
-    font-size: 0.9em;
+.price-info, .description, p {
+    color: white;
+    text-align: center;
     margin: 5px 0;
 }
 
-.description {
-    font-size: 0.9em;
-    margin: 10px 0;
-}
-
 button {
-    background-color: #0066cc;
+    background-color: limegreen;
     color: white;
     border: none;
     padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #0056b3;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 600px) {
-    .product {
-        width: 100%;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 900px) {
-    .product {
-        width: 45%;
-    }
-}
-
-@media (min-width: 901px) {
-    .product {
-        width: 30%;
-    }
+    background-color: green;
 }

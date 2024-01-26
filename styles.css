@@ -2,14 +2,34 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #000000; /* Black background */
+    background: #8B0000; /* Dark red background */
     color: #fff; /* White text color */
 }
 
+
+
+To change the background color to dark red and make the logo smaller, you can update your CSS as follows:
+
+Update the background color of the body to a dark red. Here is a suggested color, but feel free to choose a different shade if you prefer:
+
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #8B0000; /* Dark red background */
+    color: #fff; /* White text color */
+}
+To make the logo smaller, you can adjust the size of the img tag within the header. You can specify a width (and optionally a height) that you think looks best:
+
+css
+Copy code
 header img {
-    width: 100%;
-    height: auto;
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* This will maintain the aspect ratio */
     display: block;
+    margin: 10px auto; /* Centers the logo with some margin */
 }
 
 .product-container {

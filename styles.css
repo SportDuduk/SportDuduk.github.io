@@ -30,10 +30,13 @@ header {
     border-radius: 8px;
     background-color: #333;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    /* Removed fixed width */
-    /* width: 300px; */ /* You can comment out or remove this line */
-    display: inline-block; /* Add this to allow the container to fit its content */
+    
+    /* Flex item adjustment */
+    flex: 0 0 calc(33.333% - 40px); /* 33.333% for 3 items and -40px for the margins */
+    display: flex;
+    flex-direction: column;
 }
+
 
 .product:hover {
     transform: translateY(-10px);

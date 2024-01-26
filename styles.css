@@ -2,7 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #1a1a1a; /* Dark background */
+    color: #fff; /* Light text color */
 }
 
 header img {
@@ -20,11 +21,11 @@ header img {
 }
 
 .product {
-    background: #fff;
-    border: 1px solid #ddd;
+    background: #333; /* Darker background for product */
+    border: 1px solid #444; /* Slightly lighter border for contrast */
     padding: 15px;
-    width: calc(33.333% - 40px); /* Adjusting width for 3 columns layout */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: calc(33.333% - 40px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
 }
 
@@ -39,33 +40,33 @@ header img {
 
 .product-title {
     font-size: 18px;
-    color: #333;
+    color: #ddd; /* Light color for titles */
     margin: 10px 0;
 }
 
 .product-price {
     font-size: 16px;
-    color: #666;
+    color: #aaa; /* Light gray color for price */
 }
 
 .strike-through {
     text-decoration: line-through;
-    color: #999;
+    color: #777; /* Gray color for strike-through */
 }
 
 .discount {
-    color: red;
+    color: #4CAF50; /* Green color for discount */
     font-weight: bold;
 }
 
 .price-info, .description {
-    color: #666;
+    color: #bbb; /* Light gray color for additional info */
     font-size: 14px;
     margin: 5px 0;
 }
 
 button {
-    background: #0056b3;
+    background: #0056b3; /* Blue background for buttons */
     color: white;
     border: none;
     padding: 10px 15px;
@@ -75,17 +76,17 @@ button {
 }
 
 button:hover {
-    background: #004494;
+    background: #004494; /* Darker blue on hover */
 }
 
 @media (max-width: 992px) {
     .product {
-        width: calc(50% - 40px); /* Adjust for 2 columns on tablet */
+        width: calc(50% - 40px);
     }
 }
 
 @media (max-width: 600px) {
     .product {
-        width: calc(100% - 40px); /* Adjust for 1 column on mobile */
+        width: calc(100% - 40px);
     }
 }

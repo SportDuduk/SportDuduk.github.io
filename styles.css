@@ -28,9 +28,11 @@ header {
     padding: 20px;
     border: 1px solid #444;
     border-radius: 8px;
-    width: 300px;
     background-color: #333;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Removed fixed width */
+    /* width: 300px; */ /* You can comment out or remove this line */
+    display: inline-block; /* Add this to allow the container to fit its content */
 }
 
 .product:hover {
